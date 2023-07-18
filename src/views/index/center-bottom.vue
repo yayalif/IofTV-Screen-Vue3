@@ -5,7 +5,7 @@ import {graphic} from "echarts/core"
 const option = ref({});
 const getData = () => {
   currentGET("centerBottom", {}).then((res) => {
-    console.log("安装计划", res);
+    console.log("设备概况", res);
     if (res.success) {
       setOption(res.data);
     } else {
@@ -55,7 +55,7 @@ const setOption =async (newData: any) => {
       },
     },
     legend: {
-      data: ["已安装", "计划安装", "安装率"],
+      data: ["正常", "报警", "离线"],
       textStyle: {
         color: "#B4B4B4",
       },
@@ -105,47 +105,50 @@ const setOption =async (newData: any) => {
     ],
     series: [
       {
-        name: "已安装",
+        name: "正常",
         type: "bar",
         barWidth: 10,
         itemStyle: {
           borderRadius: 5,
           color: new graphic.LinearGradient(0, 0, 0, 1, [
-            { offset: 0, color: "#956FD4" },
-            { offset: 1, color: "#3EACE5" },
+            { offset: 0, color: "rgba(7,245,168,1)" },
+            { offset: 1, color: "rgba(0,245,0,1)" },
           ]),
         },
         data: newData.barData,
       },
       {
-        name: "计划安装",
+        name: "报警",
         type: "bar",
-        barGap: "-100%",
+        barGap: 0,
         barWidth: 10,
         itemStyle: {
           borderRadius: 5,
           color: new graphic.LinearGradient(0, 0, 0, 1, [
-            { offset: 0, color: "rgba(156,107,211,0.8)" },
-            { offset: 0.2, color: "rgba(156,107,211,0.5)" },
-            { offset: 1, color: "rgba(156,107,211,0.2)" },
+            { offset: 0, color: "rgba(245,2,61,1)" }, 
+            { offset: 1, color: "rgba(245,0,0,1)" },
           ]),
         },
         z: -12,
         data: newData.lineData,
       },
       {
-        name: "安装率",
-        type: "line",
-        smooth: true,
-        showAllSymbol: true,
-        symbol: "emptyCircle",
-        symbolSize: 8,
-        yAxisIndex: 1,
+        name: "离线",
+        type: "bar",
+        barGap: 0,
+        barWidth: 10,
         itemStyle: {
-          color: "#F02FC2",
+          borderRadius: 5,
+          color: new graphic.LinearGradient(0, 0, 0, 1, [
+            { offset: 1, color: "rgba(227,179,55,1)" }, 
+            // { offset: 0, color: "rgba(156,107,211,0.8)" },
+            // { offset: 0.2, color: "rgba(156,107,211,0.5)" },
+            // { offset: 1, color: "rgba(156,107,211,0.2)" },
+          ]),
         },
+        z: -12,
         data: newData.rateData,
-      },
+      }
     ],
   };
 };

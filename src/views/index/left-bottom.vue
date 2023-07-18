@@ -91,7 +91,7 @@ onMounted(() => {
                 typeRed: item.onlineState == 0,
                 typeGreen: item.onlineState == 1,
               }"
-              >{{ item.onlineState == 1 ? "上线" : "下线" }}</span
+              >{{ item.onlineState == 1 ? "在线" : "离线" }}</span
             >
 
             <div class="info addresswrap">

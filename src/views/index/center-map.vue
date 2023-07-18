@@ -6,7 +6,7 @@ import { optionHandle, regionCodes } from "./center.map";
 import BorderBox13 from "@/components/datav/border-box-13";
 import type { MapdataType } from "./center.map";
 const option = ref({});
-const code = ref("china"); //china 代表中国 其他地市是行政编码
+const code = ref("610000"); //china 代表中国 其他地市是行政编码
 
 withDefaults(
   defineProps<{
@@ -90,9 +90,9 @@ const mapClick = (params: any) => {
     </div>
     <div class="mapwrap">
       <BorderBox13>
-        <div class="quanguo" @click="getData('china')" v-if="code !== 'china'">
+        <!-- <div class="quanguo" @click="getData('china')" v-if="code !== 'china'">
           中国
-        </div>
+        </div> -->
         <v-chart
           class="chart"
           :option="option"

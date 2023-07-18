@@ -8,4 +8,9 @@ export default {
     'rightTop':"/bigscreen/alarmNum", //报警次数
     'rightBottom':'/bigscreen/rightBottom',//右下 
     'rightCenter':'/bigscreen/ranking',// 报警排名
+
+    'energyConsum': '/bigscreen/energyConsum', //用电量
+    'waterConsum': '/bigscreen/waterConsum', //用水量
+
+    'geoJson': 'https://geo.datav.aliyun.com/areas_v3/bound/geojson?code='
 }

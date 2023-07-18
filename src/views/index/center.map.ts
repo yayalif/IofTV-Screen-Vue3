@@ -4,12 +4,13 @@
 export interface MapdataType {
     name: string;
     value: [number, number, number]; //x,y,value  第一个x 第二个y  第三个value
+    adcode: number
 }
 export const optionHandle = (regionCode: string,
     list: object[],
     mapData: MapdataType[]) => {
     let top = 45;
-    let zoom = ["china"].includes(regionCode) ? 1.05 : 1;
+    let zoom = ["china"].includes(regionCode) ? 1.05 : 1.05;
     return {
         backgroundColor: "rgba(0,0,0,0)",
         tooltip: {
@@ -271,6 +272,16 @@ export const regionCodes: any = {
         "level": "province",
         "name": "陕西省"
     },
+    "宝鸡市": { adcode: 610300, name: "宝鸡市", level: "city" },
+    "咸阳市": { adcode: 610400, name: "咸阳市", level: "city" },
+    "铜川市": { adcode: 610200, name: "铜川市", level: "city" },
+    "渭南市": { adcode: 610500, name: "渭南市", level: "city" },
+    "富平县": { adcode: 610528, name: "富平县", level: "district" },
+    "延安市": { adcode: 610600, name: "延安市", level: "city" },
+    "汉中市": { adcode: 610700, name: "汉中市", level: "city" },
+    "榆林市": { adcode: 610800, name: "榆林市", level: "city" },
+    "安康市": { adcode: 610900, name: "安康市", level: "city" },
+    "商洛市": { adcode: 611000, name: "商洛市", level: "city" },
     "贵州省": {
         "adcode": "520000",
         "level": "province",

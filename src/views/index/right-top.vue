@@ -81,7 +81,7 @@ const setOption =async (xData:any[], yData:any[], yData2:any[]) => {
             type: "line",
             smooth: true,
             symbol: "none", //去除点
-            name: "报警1次数",
+            // name: "报警1次数",
             color: "rgba(252,144,16,.7)",
             areaStyle: {
                 //右，下，左，上
@@ -122,7 +122,7 @@ const setOption =async (xData:any[], yData:any[], yData2:any[]) => {
                     padding: [7, 14],
                     borderWidth: 0.5,
                     borderColor: "rgba(252,144,16,.5)",
-                    formatter: "报警1：{c}",
+                    formatter: "最大值：{c}",
                   },
                 },
                 {
@@ -143,74 +143,74 @@ const setOption =async (xData:any[], yData:any[], yData2:any[]) => {
               ],
             },
           },
-          {
-            data: yData2,
-            type: "line",
-            smooth: true,
-            symbol: "none", //去除点
-            name: "报警2次数",
-            color: "rgba(9,202,243,.7)",
-            areaStyle: {
-                //右，下，左，上
-                color: new graphic.LinearGradient(
-                  0,
-                  0,
-                  0,
-                  1,
-                  [
-                    {
-                      offset: 0,
-                      color: "rgba(9,202,243,.7)",
-                    },
-                    {
-                      offset: 1,
-                      color: "rgba(9,202,243,.0)",
-                    },
-                  ],
-                  false
-                ),
-            },
-            markPoint: {
-              data: [
-                {
-                  name: "最大值",
-                  type: "max",
-                  valueDim: "y",
-                  symbol: "rect",
-                  symbolSize: [60, 26],
-                  symbolOffset: [0, -20],
-                  itemStyle: {
-                    color: "rgba(0,0,0,0)",
-                  },
-                  label: {
-                    color: "#09CAF3",
-                    backgroundColor: "rgba(9,202,243,0.1)",
+          // {
+          //   data: yData2,
+          //   type: "line",
+          //   smooth: true,
+          //   symbol: "none", //去除点
+          //   name: "报警2次数",
+          //   color: "rgba(9,202,243,.7)",
+          //   areaStyle: {
+          //       //右，下，左，上
+          //       color: new graphic.LinearGradient(
+          //         0,
+          //         0,
+          //         0,
+          //         1,
+          //         [
+          //           {
+          //             offset: 0,
+          //             color: "rgba(9,202,243,.7)",
+          //           },
+          //           {
+          //             offset: 1,
+          //             color: "rgba(9,202,243,.0)",
+          //           },
+          //         ],
+          //         false
+          //       ),
+          //   },
+          //   markPoint: {
+          //     data: [
+          //       {
+          //         name: "最大值",
+          //         type: "max",
+          //         valueDim: "y",
+          //         symbol: "rect",
+          //         symbolSize: [60, 26],
+          //         symbolOffset: [0, -20],
+          //         itemStyle: {
+          //           color: "rgba(0,0,0,0)",
+          //         },
+          //         label: {
+          //           color: "#09CAF3",
+          //           backgroundColor: "rgba(9,202,243,0.1)",
 
-                    borderRadius: 6,
-                    borderColor: "rgba(9,202,243,.5)",
-                    padding: [7, 14],
-                    formatter: "报警2：{c}",
-                    borderWidth: 0.5,
-                  },
-                },
-                {
-                  name: "最大值",
-                  type: "max",
-                  valueDim: "y",
-                  symbol: "circle",
-                  symbolSize: 6,
-                  itemStyle: {
-                    color: "#09CAF3",
-                    shadowColor: "#09CAF3",
-                    shadowBlur: 8,
-                  },
-                  label: {
-                    formatter: "",
-                  },
-                },
-              ],
-            },
-          },
+          //           borderRadius: 6,
+          //           borderColor: "rgba(9,202,243,.5)",
+          //           padding: [7, 14],
+          //           formatter: "报警2：{c}",
+          //           borderWidth: 0.5,
+          //         },
+          //       },
+          //       {
+          //         name: "最大值",
+          //         type: "max",
+          //         valueDim: "y",
+          //         symbol: "circle",
+          //         symbolSize: 6,
+          //         itemStyle: {
+          //           color: "#09CAF3",
+          //           shadowColor: "#09CAF3",
+          //           shadowBlur: 8,
+          //         },
+          //         label: {
+          //           formatter: "",
+          //         },
+          //       },
+          //     ],
+          //   },
+          // },
         ],
       };
 }

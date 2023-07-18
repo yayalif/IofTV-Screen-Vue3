@@ -5,7 +5,7 @@ import { currentGET } from "@/api";
 
 const config = ref({
   showValue: true,
-  unit: "次",
+  unit: "万立方米",
 });
 const data= ref([])
 const getData = () => {

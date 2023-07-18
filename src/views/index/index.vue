@@ -6,6 +6,8 @@ import LeftBottom from "./left-bottom.vue";
 import CenterMap from "./center-map.vue";
 import CenterBottom from "./center-bottom.vue";
 import RightTop from "./right-top.vue";
+import CenterBottom1 from "./center-bottom1.vue";
+import CenterBottom2 from "./center-bottom2.vue";
 import RightCenter from "./right-center.vue";
 import RightBottom from "./right-bottom.vue";
 </script>
@@ -33,8 +35,8 @@ import RightBottom from "./right-bottom.vue";
     </div>
     <div class="contetn_center">
       <CenterMap class="contetn_center_top" title="设备分布图" />
-      <ItemWrap class="contetn_center-bottom" title="安装计划">
-        <CenterBottom />
+      <ItemWrap class="contetn_center-bottom" title="处理水量">
+        <CenterBottom1 />
       </ItemWrap>
     </div>
     <div class="contetn_right">
@@ -43,13 +45,13 @@ import RightBottom from "./right-bottom.vue";
       </ItemWrap>
       <ItemWrap
         class="contetn_left-bottom contetn_lr-item"
-        title="报警排名(TOP8)"
+        title="本月累计污水处理量排名(TOP8)"
         style="padding: 0 10px 16px 10px"
       >
         <RightCenter />
       </ItemWrap>
-      <ItemWrap class="contetn_left-bottom contetn_lr-item" title="数据统计图 ">
-        <RightBottom />
+      <ItemWrap class="contetn_left-bottom contetn_lr-item" title="耗电量">
+        <CenterBottom2 />
       </ItemWrap>
     </div>
   </div>
